@@ -140,27 +140,27 @@ namespace CriptografiaRSA
             }
         }
 
-        static public RSAParameters getPublicPrivateKeyInformation()
-        {
-            RSAParameters RSAParams = new RSAParameters();
+        //static public RSAParameters getPublicPrivateKeyInformation()
+        //{
+        //    RSAParameters RSAParams = new RSAParameters();
 
-            try
-            {
-                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
-                {
-                    //Export the key information to an RSAParameters object.
-                    //Pass false to export the public key information or pass
-                    //true to export public and private key information.
-                    RSAParams = RSA.ExportParameters(true);
+        //    try
+        //    {
+        //        using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+        //        {
+        //            //Export the key information to an RSAParameters object.
+        //            //Pass false to export the public key information or pass
+        //            //true to export public and private key information.
+        //            RSAParams = RSA.ExportParameters(true);
 
-                }
-            }
-            catch (CryptographicException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+        //        }
+        //    }
+        //    catch (CryptographicException e)
+        //    {
+        //        Console.WriteLine(e.Message);
+        //    }
 
-            return RSAParams;
-        }
+        //    return RSAParams;
+        //}
     }
 }
